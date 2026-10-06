@@ -1,0 +1,21 @@
+# Salesforce / SFDX local state (contains org connection info - never commit)
+.sfdx/
+.sf/
+.localdevserver/
+.sfdx-vscode/
+# Credentials / secrets
+*.key
+*.pem
+authUrl.txt
+.env
+# Node / OS / editor
+node_modules/
+npm-debug.log*
+.DS_Store
+Thumbs.db
+.idea/
+# Apex logs and test output
+**/.sfdx/**
+apex-tests/
+test-results/
+*.log

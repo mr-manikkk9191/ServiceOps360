@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Part_And_Quantity_Required</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(ISBLANK(Part__c), ISBLANK(Quantity__c), Quantity__c &lt;= 0)</errorConditionFormula>
+    <errorMessage>Select a part and enter a quantity greater than zero.</errorMessage>
+</ValidationRule>

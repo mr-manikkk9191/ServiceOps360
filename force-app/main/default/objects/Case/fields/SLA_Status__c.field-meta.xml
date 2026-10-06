@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SLA_Status__c</fullName>
+    <label>SLA Status</label>
+    <formula>IF(IsClosed, "Closed", IF(ISBLANK(SLA_Deadline__c), "No SLA", IF(NOW() &gt; SLA_Deadline__c, "Breached", IF((SLA_Deadline__c - NOW()) * 24 &lt; 1, "At Risk", "On Track"))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <type>Text</type>
+</CustomField>

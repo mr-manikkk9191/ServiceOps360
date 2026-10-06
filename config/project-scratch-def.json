@@ -1,0 +1,9 @@
+{
+    "orgName": "ServiceOps360 Dev",
+    "edition": "Developer",
+    "features": ["EnableSetPasswordInApi"],
+    "settings": {
+        "lightningExperienceSettings": { "enableS1DesktopEnabled": true },
+        "mobileSettings": { "enableS1EncryptedStoragePref2": false }
+    }
+}

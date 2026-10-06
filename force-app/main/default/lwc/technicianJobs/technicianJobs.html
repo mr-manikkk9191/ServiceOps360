@@ -1,0 +1,38 @@
+<template>
+    <lightning-card title="My Jobs" icon-name="standard:work_order">
+        <div class="slds-is-relative slds-var-p-around_medium">
+            <template lwc:if={isLoading}>
+                <lightning-spinner alternative-text="Loading" size="small"></lightning-spinner>
+            </template>
+            <template lwc:if={error}>
+                <p class="slds-text-color_error">{error}</p>
+            </template>
+            <template lwc:if={noJobs}>
+                <p class="slds-text-color_weak">No active jobs assigned to you.</p>
+            </template>
+            <template for:each={jobs} for:item="job">
+                <div key={job.id} class="job-card slds-var-m-bottom_small slds-var-p-around_small">
+                    <div class="slds-grid slds-grid_align-spread">
+                        <div class="slds-text-heading_small">{job.name} &middot; Case {job.caseNumber}</div>
+                        <lightning-badge label={job.priority} class={job.priorityClass}></lightning-badge>
+                    </div>
+                    <p class="slds-var-m-top_x-small">{job.subject}</p>
+                    <p class="slds-text-color_weak">Status: {job.status}</p>
+                    <p class={job.slaClass}>SLA: {job.slaText}</p>
+                    <template lwc:if={job.isCompleting}>
+                        <lightning-textarea label="Resolution (required)" value={resolution} onchange={handleResolutionChange}></lightning-textarea>
+                        <div class="slds-var-m-top_small">
+                            <lightning-button variant="brand" label="Confirm Completion" data-id={job.id} onclick={handleConfirmComplete}></lightning-button>
+                            <lightning-button variant="neutral" label="Cancel" class="slds-var-m-left_x-small" onclick={handleCancelComplete}></lightning-button>
+                        </div>
+                    </template>
+                    <template lwc:elseif={job.hasAction}>
+                        <div class="slds-var-m-top_small">
+                            <lightning-button variant="brand" label={job.actionLabel} data-id={job.id} data-status={job.nextStatus} onclick={handleAction}></lightning-button>
+                        </div>
+                    </template>
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,10 @@
+{
+    "name": "serviceops360",
+    "private": true,
+    "version": "1.0.0",
+    "description": "ServiceOps360 - Intelligent Service & Field Operations Platform (Salesforce)",
+    "scripts": {
+        "deploy": "sf project deploy start --source-dir force-app",
+        "test:apex": "sf apex run test --test-level RunLocalTests --code-coverage --result-format human --wait 20"
+    }
+}

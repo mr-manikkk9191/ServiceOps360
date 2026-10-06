@@ -1,0 +1,22 @@
+<template>
+    <lightning-quick-action-panel header="Assign Technician">
+        <div class="slds-is-relative">
+            <template lwc:if={isLoading}>
+                <lightning-spinner alternative-text="Loading" size="small"></lightning-spinner>
+            </template>
+            <template lwc:if={error}>
+                <p class="slds-text-color_error">{error}</p>
+            </template>
+            <template lwc:if={hasRows}>
+                <p class="slds-var-m-bottom_small">Ranked by score (skill + distance + workload).</p>
+                <lightning-datatable key-field="technicianId" data={rows} columns={columns} hide-checkbox-column onrowaction={handleRowAction}></lightning-datatable>
+            </template>
+            <template lwc:if={showEmpty}>
+                <p>No available technicians have the required skill.</p>
+            </template>
+        </div>
+        <div slot="footer">
+            <lightning-button variant="neutral" label="Close" onclick={handleClose}></lightning-button>
+        </div>
+    </lightning-quick-action-panel>
+</template>
