@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <baseObject>Work_Order__c</baseObject>
+    <category>other</category>
+    <deployed>true</deployed>
+    <description>SO360 Work Orders for ServiceOps360 reporting</description>
+    <label>SO360 Work Orders</label>
+    <sections>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Name</field>
+            <table>Work_Order__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Status__c</field>
+            <table>Work_Order__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Technician__c</field>
+            <table>Work_Order__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Case__c</field>
+            <table>Work_Order__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Scheduled_Date__c</field>
+            <table>Work_Order__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Start_Time__c</field>
+            <table>Work_Order__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>End_Time__c</field>
+            <table>Work_Order__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Labour_Charge__c</field>
+            <table>Work_Order__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Parts_Total__c</field>
+            <table>Work_Order__c</table>
+        </columns>
+        <masterLabel>SO360 Work Orders</masterLabel>
+    </sections>
+</ReportType>

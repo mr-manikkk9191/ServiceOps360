@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <baseObject>Invoice__c</baseObject>
+    <category>other</category>
+    <deployed>true</deployed>
+    <description>SO360 Invoices for ServiceOps360 reporting</description>
+    <label>SO360 Invoices</label>
+    <sections>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Name</field>
+            <table>Invoice__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Status__c</field>
+            <table>Invoice__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Work_Order__c</field>
+            <table>Invoice__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Labour_Amount__c</field>
+            <table>Invoice__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Parts_Amount__c</field>
+            <table>Invoice__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Tax_Amount__c</field>
+            <table>Invoice__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Total_Amount__c</field>
+            <table>Invoice__c</table>
+        </columns>
+        <masterLabel>SO360 Invoices</masterLabel>
+    </sections>
+</ReportType>

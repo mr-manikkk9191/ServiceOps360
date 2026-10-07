@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <baseObject>Feedback__c</baseObject>
+    <category>other</category>
+    <deployed>true</deployed>
+    <description>SO360 Feedback for ServiceOps360 reporting</description>
+    <label>SO360 Feedback</label>
+    <sections>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Name</field>
+            <table>Feedback__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Technician__c</field>
+            <table>Feedback__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Work_Order__c</field>
+            <table>Feedback__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Rating__c</field>
+            <table>Feedback__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Comments__c</field>
+            <table>Feedback__c</table>
+        </columns>
+        <masterLabel>SO360 Feedback</masterLabel>
+    </sections>
+</ReportType>
